@@ -48,7 +48,23 @@ def control_statement():
         'name':'《水浒传》',
         'author':'施耐庵'
     }]
-    return render_template('control.html',age=age,books=books)
+    websites=[{
+        'name':'X',
+        'url':'https://x.com/'
+    },{
+        'name':'Instagram',
+        'url':'https://www.instagram.com/'
+    },{
+        'name':'Github',
+        'url':'https://github.com/'
+    },{
+        'name':'YouTube',
+        'url':'https://www.youtube.com/'
+    },{
+        'name':'TikTok',
+        'url':'https://www.tiktok.com/zh-Hans'
+    }]
+    return render_template('control.html',age=age,books=books,websites=websites)
 
 if __name__ == '__main__':
     app.run()

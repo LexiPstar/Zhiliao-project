@@ -6,12 +6,17 @@
 </head>
 <body>
 {% if age > 18 %}
-  <div>您已满18岁，可以进入网吧！</div>
+    <div>您已满18岁，可以进入网吧！</div>
 {% elif age==18 %}
-  <div>您刚满18岁，请在父母陪同下进入网吧！</div>
+    <div>您刚满18岁，请在父母陪同下进入网吧！</div>
 {% else %}
-  <div>您未满18岁，无法进入网吧！</div>
+    <div>您未满18岁，无法进入网吧！</div>
 {% endif %}
-{% for book in books %} }
+{% for book in books %}
+    <div>书籍名称：{{ book.name }}   作者：{{ book.author }}</div>
+{% endfor %}
+{% for website in websites %}
+    <div>门户：{{ website.name }}  网址：{{ website.url }}</div>
+{% endfor %}
 </body>
 </html>
